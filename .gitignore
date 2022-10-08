@@ -89,7 +89,6 @@ Symbols.darwin
 Symbols.gnu-binutils
 Symbols.os2
 Symbols.static
-src/config.h
 src/config.h.in
 src/config.h.in~
 src/libsndfile.so*
@@ -140,7 +139,7 @@ CTestTestfile.cmake
 CMakeSettings.json
 
 /*[Bb]uild*/
-
+!CMakeBuild/src/config.h
 /.vscode/
 /.vs/
 /out/
