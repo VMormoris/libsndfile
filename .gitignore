@@ -139,7 +139,7 @@ CTestTestfile.cmake
 CMakeSettings.json
 
 /*[Bb]uild*/
-!CMakeBuild/src/config.h
+!**/config.h
 /.vscode/
 /.vs/
 /out/
