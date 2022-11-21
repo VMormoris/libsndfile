@@ -18,14 +18,25 @@ project "libsndfile"
     {
         "src",
         "include",
-        "include",
-        "CMakeBuild/src",
     }
 
     disablewarnings {4244, 4267, 4996, 4146}
+    filter "system:linux"
+        pic "On"
+        systemversion "latest"
+
+        includedirs
+        {
+            "CMakeBuild/src/linux",
+        }
 
     filter "system:windows"
         systemversion "latest"
+
+        includedirs
+        {
+            "CMakeBuild/src/windows",
+        }
 
     filter "configurations:Debug"
         runtime "Debug"
