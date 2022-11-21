@@ -21,6 +21,7 @@ project "libsndfile"
     }
 
     disablewarnings {4244, 4267, 4996, 4146}
+    
     filter "system:linux"
         pic "On"
         systemversion "latest"
@@ -43,6 +44,10 @@ project "libsndfile"
         symbols "on"
 
     filter "configurations:Release"
+        runtime "Release"
+        optimize "on"
+
+    filter "configurations:Dist"
         runtime "Release"
         optimize "on"
         symbols "off"
